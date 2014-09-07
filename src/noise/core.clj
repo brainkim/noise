@@ -25,7 +25,7 @@
            (o/apply-at (metro next-beat) play metro next-beat instrument
              (next score) []))))))
 
-(play (o/metronome 80) sampled-piano (map vector cantus-firmus (repeat 1)))
+(play (o/metronome 80) sampled-piano (map vector (map o/note cantus-firmus) (repeat 1)))
 
 (defn abs [n] (max n (- n)))
 
